@@ -1,48 +1,27 @@
 extends ../layout
 
 block content
-	section.parallax-container
-		.parallax
-			img(src="/images/colorfull2.jpg").blur
-			input(id="all_friends_id",type="hidden",value="#{all_friends}")
-			input(id="current_user_id",type="hidden",value="#{current_user.id}")
-
-	.row
-		.col.m3.hide-on-mobile-only
-			ul.collection.with-header
-				li.collection-header
-					h5.cyan-text 一覧
-				for user in users
-					li.collection-item
-						a(href="/users/#{user.id}")= user.name
+	.container
+		.card-panel
+			h5 ID検索
+			form(action="")
+				.row
+					.input-field.col.s9
+						input(type="text" name="uniq_user_id")
+					.input-field.col.s3
+						button.btn-flat.waves-effect.blue.accent-3.white-text
+							i.fa.fa-search
 		
-		.col.m9
-			.row#friend_place
-				for user in users
-					article.col.s12.m6.l3
-						.card.small
-							.card-image
-								if user.image
-									img(src="#{user.image}")
-								else
-									img(src="/images/colorfull2.jpg").blur
-							.card-content
-								span.card-title
-									a(href="/users/#{user.id}").cyan-text= user.name
-							.card-action
-								if (friends.indexOf(user.id)) >= 0
-									button.btn-flat.pink.white-text.waves-effect.waves-light(id="be_friend_form_#{user.id}_#{current_user.id} friend_follow_submit" data-friend-id="be_friend_form_#{user.id}_#{current_user.id}" action="/friends/unfollow").be_friend_form フォロー中
-								else	
-									button.btn-flat.blue.white-text.waves-effect.waves-light(id="be_friend_form_#{user.id}_#{current_user.id} friend_follow_submit" data-friend-id="be_friend_form_#{user.id}_#{current_user.id}" action="/friends/follow").be_friend_form フォロー
+		ul.collection.with-header
+			li.collection-header
+				h5 検索結果
+			- var i = 33
+			while i--
+				li.collection-item.avatar
+					i.circle.fa.fa-user.cyan-text.white
+					span.title Something name
+					p something description
 
-			#read_more_friend.center
-				input(type="hidden",value="1",class="page_id")
-				.preloader-wrapper.active#loading_friend
-					.spinner-layer.spinner-blue-only
-						.circle-clipper.left
-							.circle
-						.gap-patch
-							.circle
-						.circle-clipper.right
-							.circle
-				i.mdi-navigation-expand-more.center.cyan-text.small.btn-flat#load_more_friend
+					a(href="" class="secondary-content btn-flat waves-effect white")
+						i.fa.fa-heart-o.pink-text
+

@@ -2,93 +2,35 @@ extends ../layout
 
 block content
 	if current_user
-		section.parallax-container.hide-on-small-only
-			.parallax
-				if current_user.image
-					img(src="#{current_user.image}")
-				else
-					img.blur(src='/images/colorfull2.jpg', alt='Aimerthyst')
-		section.section.grey.lighten-3
-			input(id="friends_id",type="hidden",value="#{friends_id}")
-			input(id="current_user_id",type="hidden",value="#{current_user.id}")
-			#scroll_fire.container
-				#card_box.row
-					if posts.length != 0
-						- i = 0
-						for post in posts
-							include _post
-							- i++
-					else
-						h5.font_size_22.center-align あなたの写真であなたを表現しよう(・∀・)！！
-						include ../users/_edit_user_form
-						h5.font_size_22.center-align あなたの情報を入力してみよう(・∀・)！！
-						include ../users/_edit_user_image
+		.row.container
+			.col.s12
+				.row
+					.col.s12
+						- var o = 33
+						while o--
+							if (o % 2) == 0
+								.card-panel.yellow.accent-1
+									.row.valign-wrapper
+										.col.s2.m1
+											img.circle.responsive-img(src="/images/colorfull6.jpg")
+										.col.s10
+											span.black-text This is a square image. Add the "circle" class to it to make it appear circular.
+							else
+								.card-panel
+									.row.valign-wrapper
+										.col.s2.m1
+											img.circle.responsive-img(src="/images/amethyst_flat.png")
+										.col.s10
+											span.black-text This is a square image. Add the "circle" class to it to make it appear circular.
 						
-						ul.collection.with-header
-							li.collection-header
-								h5.font_size_22 他のユーザーをフォローしてみよう
-							
-							for user in users
-								li.collection-item.avatar
-									if user.image
-										img(src="#{user.image}").circle
-									else
-										img(src="/images/amethyst_flat.png").circle
-									span.title= user.name
-									form(action="/friends/follow",method="post",id="be_friend_form_#{user.id}_#{current_user.id}",class="be_friend_form")
-										input(type="hidden",value="#{user.id}",name="friend_id",id="friend_id")
-										input(type="hidden",value="#{current_user.id}",name="user_id",id="user_id")
-										button.btn-flat.blue.white-text.waves-effect.waves-light#friend_follow_submit フォロー
-
-	
-							
-				//追加の記事を読み込むときはこれQ
-				if posts.length >= 18
-					#read_more.center
-						input(type="hidden",value="1",class="page_id")
-						.preloader-wrapper.active#loading
-							.spinner-layer.spinner-blue-only
-								.circle-clipper.left
-									.circle
-								.gap-patch
-									.circle
-								.circle-clipper.right
-									.circle
-						i.mdi-navigation-expand-more.center.cyan-text.small.btn-flat#load_more
-
-
 
 	else
-		section.parallax-container
-			.parallax
-				img(src="/images/colorfull2.jpg",class="blur")
-		.row
+		.container.row
 			p= current_user
-			section.col.s12.m4.grey.lighten-5
-				h1.tangerine.cyan-text Aimerthyst
+			section.col.s12.grey.lighten-5.card-panel
+				h1.tangerine.cyan-text Stay_here
 				p.cyan-text ログインはこちらから
 				include ../auth/_login_form
 				include ../auth/_attention	
 				
-				article
-					h5.font_size_22.orange-text Aimerthyst運営のアカウント
-					.card
-						.card-image
-							img(src="#{aimerthyst.image}")
-							span.card-title.ts-grey #{aimerthyst.name}
-						.card-content
-							p  
-								| Aimerthyst運営チームのアカウントです
-								| 少しでも興味を持っていただければ幸いです(・∀・)！！
-						.card-action
-							a(href="/company") 会社概要
-							a(href="/users/#{aimerthyst.id}") もっと見る
 
-			section.col.s12.m8.cyan.lighten-5
-				.row
-					for post in posts
-						include _post
-
-				.card-panel
-					.center
-						a.cyan-text(href="/users/1") もっと詳しく見てみよう(・∀・)！！

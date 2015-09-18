@@ -34,7 +34,7 @@ errorLogger.info("エラーログやで(・∀・)！！")
 
 #-----Flash-----#
 app.use(session({
-    secret: conf.secrets.pass,
+    secret: "somethig_rhiofhoirncmisizjiovhughhtuifbfbguisrhsruihfsFStsgfdlehiorsAger",
     resave: true,
     saveUninitialized: true
 }))
@@ -119,9 +119,6 @@ app.use (err, req, res, next) ->
     message: err.message
     error: {}
   return
-
-
-
 
 
 

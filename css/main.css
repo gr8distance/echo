@@ -1,0 +1,178 @@
+@import url(http://fonts.googleapis.com/css?family=Tangerine|Pinyon+Script);
+#show_all_time {
+  display: block; }
+
+.write_rep_form {
+  display: none; }
+
+@media screen and (min-width: 320px) {
+  #scroll_fire {
+    width: 94%; }
+
+  .nav-wrapper {
+    z-index: 1000; }
+
+  .parallax-container {
+    height: 180px; }
+
+  .header_place {
+    margin: 18px; } }
+@media screen and (min-width: 600px) {
+  #scroll_fire {
+    width: 80%; }
+
+  .nav-wrapper {
+    z-index: 998; }
+
+  .parallax-container {
+    height: 400px; } }
+.tangerine {
+  font-family: 'Tangerine', cursive; }
+
+.pinyon {
+  font-family: 'Pinyon Script', cursive; }
+
+.font_size_10 {
+  font-size: 10px; }
+
+.font_size_12 {
+  font-size: 12px; }
+
+.font_size_14 {
+  font-size: 14px; }
+
+.font_size_16 {
+  font-size: 16px; }
+
+.font_size_18 {
+  font-size: 18px; }
+
+.font_size_20 {
+  font-size: 20px; }
+
+.font_size_22 {
+  font-size: 22px; }
+
+.font_size_24 {
+  font-size: 24px; }
+
+.font_size_26 {
+  font-size: 26px; }
+
+.font_size_28 {
+  font-size: 28px; }
+
+.font_size_30 {
+  font-size: 30px; }
+
+.font_size_32 {
+  font-size: 32px; }
+
+.font_size_34 {
+  font-size: 34px; }
+
+.font_size_36 {
+  font-size: 36px; }
+
+.font_size_38 {
+  font-size: 38px; }
+
+.font_size_40 {
+  font-size: 40px; }
+
+.font_size_42 {
+  font-size: 42px; }
+
+.font_size_44 {
+  font-size: 44px; }
+
+.font_size_46 {
+  font-size: 46px; }
+
+.font_size_48 {
+  font-size: 48px; }
+
+.font_size_50 {
+  font-size: 50px; }
+
+.font_size_52 {
+  font-size: 52px; }
+
+.font_size_54 {
+  font-size: 54px; }
+
+.font_size_56 {
+  font-size: 56px; }
+
+.font_size_58 {
+  font-size: 58px; }
+
+.font_size_60 {
+  font-size: 60px; }
+
+.font_size_62 {
+  font-size: 62px; }
+
+.font_size_64 {
+  font-size: 64px; }
+
+.font_size_66 {
+  font-size: 66px; }
+
+.font_size_68 {
+  font-size: 68px; }
+
+.font_size_70 {
+  font-size: 70px; }
+
+.thin {
+  font-weight: 100; }
+
+.apple_grey {
+  color: #666666; }
+
+.u_bord {
+  border-bottom: 1px solid #666666; }
+
+.u_bord_white {
+  border-bottom: 1px solid #ffffff; }
+
+.ts-grey {
+  text-shadow: 3px 3px 3px black; }
+
+@media screen and (min-width: 640px) {
+  #header_margin {
+    width: 88%;
+    margin: 0 auto; } }
+.blur {
+  -webkit-filter: blur(6px);
+  filter: blur(6px); }
+
+.blur_large {
+  -webkit-filter: blur(18px);
+  filter: blur(18px); }
+
+#over_marhin {
+  margin-top: 120px; }
+
+.rotate_icon {
+  animation: rotate_icon_move 1s ease 0s infinite;
+  -webkit-animation: rotate_icon_move 1s ease 0s infinite; }
+
+@-webkit-keyframes rotate_icon_move {
+  100% {
+    -webkit-transform: rotateX("360deg");
+    transform: rotateX("360deg"); } }
+@keyframes rotate_icon_move {
+  100% {
+    -webkit-transform: rotateX("360deg");
+    transform: rotateX("360deg"); } }
+.sq {
+  width: 60px;
+  height: 60px;
+  overflow: hidden; }
+
+.delete_post_form {
+  cursor: pointer; }
+
+/*# sourceMappingURL=main.css.map */

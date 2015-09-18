@@ -3,6 +3,12 @@
 .write_rep_form{
   display: none;
 }
+#show_all_time{
+  display: block;
+}
+#over_view{
+  z-index: 1000;
+}
 @media screen and (min-width: 320px){
   #scroll_fire{
     width: 94%;
