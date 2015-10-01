@@ -108,12 +108,10 @@ app.use (err, req, res, next) ->
 io.on("connection",(socket)->
 	console.log('user connected')
 	
-	socket.on("send_post_card",(data)->
-		socket.broadcast.emit("hand_out_post_card",data)
-	)
 	
-)
-#-----SocketIO------#
+)#-----SocketIO------#
+
+
 
 http.listen(3000,->
 	console.log "Server is running!"

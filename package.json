@@ -6,21 +6,22 @@
     "start": "node ./bin/www"
   },
   "dependencies": {
-    "express": "~4.2.0",
-    "static-favicon": "~1.0.0",
-    "morgan": "~1.0.0",
-    "cookie-parser": "~1.0.1",
     "body-parser": "~1.0.0",
+    "connect-flash": "*",
+    "cookie-parser": "*",
     "debug": "~0.7.4",
+    "express": "~4.2.0",
+    "express-session": "*",
+    "http-proxy": "^1.11.2",
     "jade": "~1.3.0",
-		"cookie-parser": "*",
-		"express-session": "*",
-		"connect-flash": "*",
-		"socket.io":"*",
-		"underscore":"*",
-		"mysql":"*",
-		"sequelize": "*",
-		"passport": "*",
-		"passport-local": "*"
+    "morgan": "~1.0.0",
+    "mysql": "*",
+    "passport": "*",
+    "passport-local": "*",
+    "pm2": "^0.15.7",
+    "sequelize": "*",
+    "socket.io": "*",
+    "static-favicon": "~1.0.0",
+    "underscore": "*"
   }
 }

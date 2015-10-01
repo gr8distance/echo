@@ -1,0 +1,4 @@
+#!/bin/bash
+
+sudo pm2 reload proxy.coffee
+sudo NODE_ENV=production pm2 reload app.coffee
